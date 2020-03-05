@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="CADBooster.Second.Addin.Windows.TaskPane.TaskPaneWindow"
+             mc:Ignorable="d"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:CADBooster.Second.Addin.Windows.TaskPane.ViewModels"
+             xmlns:userControls="clr-namespace:CADBooster.Second.Addin.Windows.TaskPane.UserControls"
+             d:DesignHeight="1100" d:DesignWidth="350" 
+             Background="#F7F7F7"
+             UseLayoutRounding="True"
+             Loaded="TaskPaneWindow_OnLoaded"
+             d:DataContext="{d:DesignInstance viewModels:TaskPaneWindowViewModel}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewModels:NoFilePanelViewModel}">
+                <userControls:NoFilePanel/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Width="350" HorizontalAlignment="Left">
+        <ContentControl Focusable="False" Content="{Binding PanelViewModel}" />
+    </Grid>
+</UserControl>

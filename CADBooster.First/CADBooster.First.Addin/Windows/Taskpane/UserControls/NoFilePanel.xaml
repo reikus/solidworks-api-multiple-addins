@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="CADBooster.First.Addin.Windows.TaskPane.UserControls.NoFilePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:CADBooster.First.Addin.Windows.TaskPane.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1100" d:DesignWidth="350"
+             Background="#F7F7F7"
+             UseLayoutRounding="True"
+             d:DataContext="{d:DesignInstance viewModels:NoFilePanelViewModel}"
+             x:ClassModifier="internal">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Image Source="/CADBooster.First.Addin;component/Windows/Common/Img/Drew3.png"
+                   MaxHeight="200" Margin="5" />
+            <TextBlock HorizontalAlignment="Center"
+                       Text="Hi there!" Margin="0 10" />
+        </StackPanel>
+    </Grid>
+</UserControl>
