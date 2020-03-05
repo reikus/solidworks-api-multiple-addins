@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using AngelSix.SolidDna;
 
-namespace CADBooster.Drew.Drawing.Windows.TaskPane
+namespace CADBooster.First.Addin.Windows.TaskPane
 {
     [ProgId(MyProgId)]
     public partial class TaskPaneHost : UserControl, ITaskpaneControl
@@ -11,7 +11,7 @@ namespace CADBooster.Drew.Drawing.Windows.TaskPane
         /// <summary>
         /// Our unique ProgId for SolidWorks to find and load us
         /// </summary>
-        private const string MyProgId = "CADBooster.Drew";
+        private const string MyProgId = "CADBooster.First";
 
         #endregion
 

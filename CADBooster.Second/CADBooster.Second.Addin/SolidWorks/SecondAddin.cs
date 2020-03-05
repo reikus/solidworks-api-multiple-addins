@@ -16,9 +16,6 @@ namespace CADBooster.Second.Addin.SolidWorks
     {
         private static readonly Logger Log = Logger.GetLogger(nameof(SecondAddin));
 
-        /// <summary>
-        /// Directory path to Drew.dll assembly. Used for loading/resolving missing assemblies.
-        /// </summary>
         private static string _addinDirectory;
 
         /// <summary>

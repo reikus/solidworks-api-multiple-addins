@@ -1,4 +1,4 @@
-namespace CADBooster.Drew.Drawing.Windows.TaskPane
+namespace CADBooster.Second.Addin.Windows.TaskPane
 {
     partial class TaskPaneHost
     {

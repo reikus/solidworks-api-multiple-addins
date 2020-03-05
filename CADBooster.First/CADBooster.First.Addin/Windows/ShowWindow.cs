@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using AngelSix.SolidDna;
-using CADBooster.Drew.Drawing.Windows.TaskPane;
 using CADBooster.First.Addin.Windows.TaskPane;
 using CADBooster.First.Logging;
 
