@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using AngelSix.SolidDna;
+using CADBooster.First.Addin.SolidWorks;
 using CADBooster.First.Addin.Windows.TaskPane;
 using CADBooster.First.Logging;
 
@@ -14,7 +15,7 @@ namespace CADBooster.First.Addin.Windows
         {
             try
             {
-                var taskPane = new TaskpaneIntegration<TaskPaneHost>
+                var taskPane = new TaskpaneIntegration<TaskPaneHost, FirstAddin>
                 {
                     WpfControl = new TaskPaneWindow()
                 };

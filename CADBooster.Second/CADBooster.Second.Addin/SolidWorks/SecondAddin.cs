@@ -12,7 +12,7 @@ namespace CADBooster.Second.Addin.SolidWorks
     /// Register as a SolidWorks addin
     /// </summary>
     [Guid("43cdc356-3d4f-4eaf-a727-6784d257e96b"), ComVisible(true)]
-    public class SecondAddin : AddInIntegration
+    public class SecondAddin : SolidAddIn
     {
         private static readonly Logger Log = Logger.GetLogger(nameof(SecondAddin));
 
@@ -23,17 +23,7 @@ namespace CADBooster.Second.Addin.SolidWorks
         /// </summary>
         public override void ApplicationStartup()
         {
-            string version = ProcessHelpers.GetAssemblyVersion(Assembly.GetExecutingAssembly());
             Loggers.StartLogging(new LogFilePath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Second-log.txt")));
-        }
-
-        /// <summary>
-        /// Runs before PreConnectToSolidWorks
-        /// </summary>
-        /// <param name="construction"></param>
-        public override void ConfigureServices(FrameworkConstruction construction)
-        {
-            
         }
 
         /// <summary>
@@ -57,7 +47,7 @@ namespace CADBooster.Second.Addin.SolidWorks
         /// </summary>
         private static void ResolveMissingAssemblies()
         {
-            if (PlugInIntegration.UseDetachedAppDomain) return;
+            if (AppDomainBoundary.UseDetachedAppDomain) return;
 
             _addinDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             if (_addinDirectory == null)
