@@ -175,14 +175,15 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AngelSix.SolidDna">
-      <Version>1.0.1.10</Version>
-    </PackageReference>
     <PackageReference Include="PropertyChanged.Fody">
       <Version>2.6.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\solidworks-api\SolidDna\AngelSix.SolidDna\AngelSix.SolidDna.csproj">
+      <Project>{00a74afd-505d-451f-9896-236fc407103e}</Project>
+      <Name>AngelSix.SolidDna</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CADBooster.First.Logging\CADBooster.First.Logging.csproj">
       <Project>{4b9c75b9-a16c-488a-83d1-509963a0d543}</Project>
       <Name>CADBooster.First.Logging</Name>
