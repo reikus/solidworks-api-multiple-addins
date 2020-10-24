@@ -15,7 +15,6 @@ namespace CADBooster.First.Addin.SolidWorks
         public override void ConnectedToSolidWorks()
         {
             Log.Info("First add-in connected to SOLIDWORKS", nameof(ConnectedToSolidWorks));
-          
             ShowWindow.TaskPane();
         }
         

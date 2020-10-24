@@ -19,7 +19,7 @@
             <Image Source="/CADBooster.First.Addin;component/Windows/Common/Img/Drew3.png"
                    MaxHeight="200" Margin="5" />
             <TextBlock HorizontalAlignment="Center"
-                       Text="Hi there!" Margin="0 10" />
+                       Text="First add-in" Margin="0 10" />
         </StackPanel>
     </Grid>
 </UserControl>

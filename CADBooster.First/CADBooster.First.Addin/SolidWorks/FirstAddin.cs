@@ -23,7 +23,6 @@ namespace CADBooster.First.Addin.SolidWorks
         /// </summary>
         public override void ApplicationStartup()
         {
-            string version = ProcessHelpers.GetAssemblyVersion(Assembly.GetExecutingAssembly());
             Loggers.StartLogging(new LogFilePath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "First-log.txt")));
         }
 
